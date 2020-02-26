@@ -17,4 +17,3 @@ COPY production.json ./config/production.json
 CMD NODE_ENV=production node index.js
 
 # add a volume for mongo storage or replace with cloud
-# mongodb://pallespm:upmc123@ds047315.mlab.com:47315/oddessentials

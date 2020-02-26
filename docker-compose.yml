@@ -13,6 +13,6 @@ services:
     ports:
       - "27017"
     volumes: 
-      - ./mongo-volume:/data/db
+      - mongo-volume:/data/db
 volumes:
   mongo-volume:

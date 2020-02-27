@@ -1,18 +1,25 @@
 version: "3.7"
 services:
-  web:
-    build: .
-    ports:
-      - "8000:4000"
-    links:
-      - database:mongodb
-    depends_on:
-      - database
   database:
     image: mongo
-    ports:
-      - "27017"
     volumes: 
-      - mongo-volume:/data/db
+      - mongo-volume:/pa11ydata
+    restart: always
+    networks:
+      - universal
+  web:
+    depends_on:
+      - database
+    # image: pallespm/pa11y-docker
+    build: .
+    ports:
+      - "80:4000"
+    links:
+      - database:mongodb
+    restart: always
+    networks:
+      - universal
 volumes:
   mongo-volume:
+networks:
+  universal:

@@ -3,7 +3,7 @@
   "noindex": true,
   "readonly": false,
   "webservice": {
-    "database": "mongodb://0.0.0.0:27017/pa11y-webservice",
+    "database": "mongodb://database/pa11y-webservice",
     "host": "0.0.0.0",
     "port": 3000,
     "cron": "0 30 0 * * *",

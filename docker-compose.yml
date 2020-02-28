@@ -18,7 +18,7 @@ services:
     ports:
       - "80:4000"
     links:
-      - database:mongodb
+      - database
     restart: always
     networks:
       - universal
